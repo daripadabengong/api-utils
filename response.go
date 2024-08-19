@@ -22,7 +22,7 @@ func JSONResponse(w http.ResponseWriter, responsePayload interface{}, code int) 
 	}
 }
 
-func JSONError(w http.ResponseWriter, code int, errMessage string) {
+func JSONError(w http.ResponseWriter, errMessage string, code int) {
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.Header().Set("X-Content-Type-Options", "nosniff")
 	w.WriteHeader(code)
